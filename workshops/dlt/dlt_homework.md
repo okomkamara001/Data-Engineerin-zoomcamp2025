@@ -26,4 +26,16 @@ We'll use NYC Taxi data via the same custom API from the workshop
 
 ## Question 2: Define & Run the pipeline (NTC TaxI API)
 
+  > How many tables were created?
+  - 4
 
+## Explore the loaded data
+> df = pipeline.dataset(dataset_type="default").rides.df()
+df
+## Question 3: What is the total number of record extracted?
+- 10,000
+
+## Trip Duration Analysis
+## Question 4: Calculate the average trip duration in minutes.
+
+- 12.3049
