@@ -8,9 +8,10 @@ with tripdata as
 (
   select *,
     row_number() over(partition by vendorid, lpep_pickup_datetime) as rn
-  from {{ source('staging','green_tripdata') }}
+  from {{ source('raw_nyc_tripdata','ext_green_taxi') }}
   where vendorid is not null 
 )
+
 select
     -- identifiers
     {{ dbt_utils.generate_surrogate_key(['vendorid', 'lpep_pickup_datetime']) }} as tripid,
