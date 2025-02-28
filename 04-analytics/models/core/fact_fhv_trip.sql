@@ -20,7 +20,7 @@ trips_unioned as (
     union all 
     select * from yellow_tripdata
 ), 
-dim_zones as (
+dim_zone_lookup as (
     select * from {{ ref('dim_zone_lookup') }}
     where borough != 'Unknown'
 )
