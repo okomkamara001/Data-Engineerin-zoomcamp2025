@@ -232,7 +232,7 @@ For the Trips that respectively started from Newark Airport, SoHo, and Yorkville
 
 > **LaGuardia Airport, Chinatown, Garment District**
 
-> WITH ranked_trips AS (
+WITH ranked_trips AS (
     SELECT 
         pz.zone AS pickup_zone,
         dz.zone AS dropoff_zone,
